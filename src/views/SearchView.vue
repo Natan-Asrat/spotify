@@ -14,7 +14,8 @@
         </NavbarWrapper>
         <div class="container">
             <MixesComponent title="Recent searches" :mixes="recentlyPlayed"/>
-            <WideComponent title="Your top genres" :cards="genres" />
+            <WideComponent title="Your top genres" :cards="your_genres" />
+            <SmallCardComponent title="Browse all" :cards="all_genres" />
         </div>
 
     </main> 
@@ -28,11 +29,12 @@ import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
 import { useUserStore } from '@/stores/user';
 import MixesComponent from '@/components/Desktop/Body/MixesComponent.vue';
 import WideComponent from '@/components/Desktop/Body/WideComponent.vue';
-
+import SmallCardComponent from '@/components/Desktop/Body/SmallCardComponent.vue';
+import { useCategoriesStore } from '@/stores/categories';
 const userStore = useUserStore();
 const recentlyPlayed = [...userStore.mixes].splice(1, 2);
-const genres = userStore.genres
-
+const your_genres = userStore.genres
+const all_genres = useCategoriesStore().genres;
 </script>
 
 <style lang="scss" scoped>

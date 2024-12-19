@@ -1,5 +1,5 @@
 <template>
-    <div class="wide-card-wrapper">
+    <div class="small-card-wrapper">
         <img :src="card.image" :alt="card.name"/>
         <span>{{ card.name }}</span>
     </div>
@@ -12,8 +12,8 @@ defineProps({
 })
 </script>
 <style lang="scss" scoped>
-.wide-card-wrapper {
-    min-width: 280px;
+.small-card-wrapper {
+    width: 140px;
     height: 140px;
     position: relative;
     span {
@@ -27,8 +27,8 @@ defineProps({
     img {
         width: 100%;
         height: 100%;
-        border-radius: 5px;
         object-fit: cover;
+        border-radius: 5px;
     }
 }
 </style>

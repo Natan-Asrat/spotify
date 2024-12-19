@@ -38,7 +38,8 @@ $search-page-body-mixes-title-color: white;
 $search-page-body-your-genres-item-name-text-color: black;
 $search-page-body-your-genres-title-text-color: white;
 
-
+$search-page-body-all-genres-item-name-text-color: black;
+$search-page-body-all-genres-title-text-color: white;
 .left-navbar-components {
   section {
       color: white;
@@ -204,6 +205,16 @@ $search-page-body-your-genres-title-text-color: white;
     .wide-card-wrapper {
       span {
         color: $search-page-body-your-genres-item-name-text-color;
+      }
+    }
+  }
+  .small-container {
+    .title {
+      color: $search-page-body-all-genres-title-text-color;
+    }
+    .small-card-wrapper {
+      span {
+        color: $search-page-body-all-genres-item-name-text-color;
       }
     }
   }
