@@ -1,6 +1,9 @@
 $horizonntal-rule-color: #282828;
 $categories-text-color: #B3B3B3;
 $playing-song-artist-color: #B3B3B3;
+$home-page-nav-user-background: #000000;
+$home-page-nav-user-dropdown-background: #282828;
+$home-page-nav-user-dropdown-text-color: #ffffff;
 .left-navbar-components {
   section {
       color: white;
@@ -72,7 +75,40 @@ $playing-song-artist-color: #B3B3B3;
   }
 
 }
+.home-page {
+  background: linear-gradient(
+    to bottom, 
+    #3333A3 0%, 
+    #121212 100vh, 
+    #121212 100%
+  );
+  .nav-button-wrapper{
+    background-color: black;
+    .icon {
+      color: white;
+    }
+  }
 
+  .dropdown {
+    background-color: $home-page-nav-user-dropdown-background;
+    button{
+      color: $home-page-nav-user-dropdown-text-color;
+
+    }
+  }
+  .user-component {
+    background-color: $home-page-nav-user-background;
+    span{
+      color: white;
+      margin-right: 4px;
+    }
+    .dropdown-icon {
+      color: white;
+      margin-right: 8px;
+    }
+    
+  }
+}
 ::-webkit-scrollbar {
   width: 5px;
 }

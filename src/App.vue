@@ -1,7 +1,9 @@
 <template>
   <div class="main-container">
     <LeftSidebar class="sidebar left"/>
-    <div class="middle-container" :class="{ expanded: isRightSidebarCollapsed }"></div>
+    <div class="middle-container" :class="{ expanded: isRightSidebarCollapsed }">
+      <RouterView />
+    </div>
     <RightSidebar ref="rightSidebar" :isRightSidebarCollapsed="isRightSidebarCollapsed" @set-right-sidebar-collapsed="setRightSidebarCollapsed" class="sidebar right" :class="{ collapsed: isRightSidebarCollapsed }"/>
   </div>
 </template>
