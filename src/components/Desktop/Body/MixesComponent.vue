@@ -1,19 +1,25 @@
 <template>
     <section class="mixes-container">
         <header>
-            <span class="title">Your Mixes</span>
+            <span class="title">{{ title }}</span>
             <span class="see-all">See all</span>
 
         </header>
         <div class="mixes">
-            <MixItem v-for="m in userStore.mixes" :mix="m" :key="m.id"/>
+            <MixItem v-for="m in mixes" :mix="m" :key="m.id"/>
         </div>
     </section>
 </template>
 <script setup>
-import { useUserStore } from '@/stores/user';
 import MixItem from './MixItem.vue';
-const userStore = useUserStore();
+defineProps({
+    title: {
+        type: String
+    },
+    mixes: {
+        type: Array
+    }
+})
 </script>
 <style lang="scss" scoped>
 .title {

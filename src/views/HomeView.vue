@@ -12,7 +12,10 @@
         </NavbarWrapper>
         <div class="container">
             <CategoriesComponent />
-            <YourMixes />
+            <MixesComponent title="Your Mixes" :mixes="recentlyPlayed"/>
+            <MixesComponent title="Made for you" :mixes="yourMixes"/>
+            <MixesComponent title="Recently played" :mixes="madeForYou"/>
+            <MixesComponent title="Jump back in" :mixes="jumpBackIn"/>
 
         </div>
     </main>
@@ -25,7 +28,15 @@ import UserComponent from '@/components/Desktop/TopNavbar/UserComponent.vue';
 import ButtonNavigation from '@/components/Desktop/TopNavbar/ButtonNavigation.vue';
 import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
 import CategoriesComponent from '@/components/Desktop/Body/CategoriesComponent.vue';
-import YourMixes from '@/components/Desktop/Body/YourMixes.vue';
+import { useUserStore } from '@/stores/user';
+
+const userStore = useUserStore();
+const recentlyPlayed = [...userStore.mixes].splice(1, 2);
+const yourMixes = [...userStore.mixes].splice(0, 2);
+const madeForYou = [...userStore.mixes].splice(2, 1);
+const jumpBackIn = [...userStore.mixes].splice(1, 2);
+
+import MixesComponent from '@/components/Desktop/Body/MixesComponent.vue';
 </script>
 
 
@@ -45,5 +56,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    margin-bottom: 60px;
 }
 </style>
