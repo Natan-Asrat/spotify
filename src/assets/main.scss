@@ -1,0 +1,90 @@
+$horizonntal-rule-color: #282828;
+$categories-text-color: #B3B3B3;
+$playing-song-artist-color: #B3B3B3;
+.left-navbar-components {
+  section {
+      color: white;
+  }
+  &.playing {
+    h3 {
+      margin: 0;
+    }
+    .song-name {
+      font-size: 12px;
+      font-weight: 300;
+    }
+    .song-detail-container {
+      padding-top: 22px ;
+      padding-left: 9px;
+      padding-bottom: 22px;
+    }
+    .song-artist {
+      font-size: 12px;
+      color: $playing-song-artist-color;
+      font-weight: 600;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  ul {
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      gap: 5px;
+  }
+  li {
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      list-style: none;
+      cursor: pointer;
+  }
+  .icon {
+      height: 18px;
+      width: 18px;
+  }
+  hr {
+    margin-top: 10px;
+    border: none;
+    background-color: $horizonntal-rule-color;
+    height: 1px;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  &.categories {
+    li {
+      color: $categories-text-color;
+      text-align: left;
+      direction: ltr;
+    }
+    ul {
+      flex: 1;
+      overflow-y: auto;
+      direction: rtl;
+    }
+  }
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  max-height: 100vh;
+}
