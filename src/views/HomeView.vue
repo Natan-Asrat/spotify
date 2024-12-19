@@ -10,8 +10,11 @@
                 <UserComponent class="user-component"/>
             </template>
         </NavbarWrapper>
-        <CategoriesComponent />
+        <div class="container">
+            <CategoriesComponent />
+            <YourMixes />
 
+        </div>
     </main>
 
 </template>
@@ -22,6 +25,7 @@ import UserComponent from '@/components/Desktop/TopNavbar/UserComponent.vue';
 import ButtonNavigation from '@/components/Desktop/TopNavbar/ButtonNavigation.vue';
 import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
 import CategoriesComponent from '@/components/Desktop/Body/CategoriesComponent.vue';
+import YourMixes from '@/components/Desktop/Body/YourMixes.vue';
 </script>
 
 
@@ -31,9 +35,15 @@ main {
     display: flex;
     flex-direction: column;
     padding: 0 40px;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0px;
     .nav-wrapper-component {
         height: 60px;
     }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 </style>

@@ -5,6 +5,43 @@ export const useUserStore = defineStore("user", {
         user: {
             name: 'John Doe',
             avatar: 'https://placehold.co/50'
-        }
+        },
+        mixes: [
+            {
+                name: 'Chill Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Pop Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Phieze Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Indie Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Daily Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Indie Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+            {
+                name: 'Daily Mix',
+                artists: 'Jullia Wolf, Khalid, and more',
+                image: 'https://placehold.co/100'
+            },
+        ]
     })
 })

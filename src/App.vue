@@ -56,12 +56,14 @@ $middle-content-bgcolor: white;
   height: 100vh;
   width: 100%;
   position: relative; 
+  overflow: hidden;
 }
 
 .middle-container {
   flex:3;
   transition: flex 0.3s ease;
   background-color: $middle-content-bgcolor;
+  overflow-y: auto;
   &.expanded {
     flex: 4;
   }
