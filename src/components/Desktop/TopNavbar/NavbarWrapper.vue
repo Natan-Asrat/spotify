@@ -15,7 +15,7 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 5px 0;
 
     .mid {
         flex: 1;

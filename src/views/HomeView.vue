@@ -10,6 +10,7 @@
                 <UserComponent class="user-component"/>
             </template>
         </NavbarWrapper>
+        <CategoriesComponent />
 
     </main>
 
@@ -20,6 +21,7 @@ import UserComponent from '@/components/Desktop/TopNavbar/UserComponent.vue';
 
 import ButtonNavigation from '@/components/Desktop/TopNavbar/ButtonNavigation.vue';
 import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
+import CategoriesComponent from '@/components/Desktop/Body/CategoriesComponent.vue';
 </script>
 
 
@@ -27,7 +29,8 @@ import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
 
 main {
     display: flex;
-    padding: 0 20px;
+    flex-direction: column;
+    padding: 0 40px;
     height: 100vh;
     .nav-wrapper-component {
         height: 60px;
