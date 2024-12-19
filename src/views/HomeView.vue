@@ -27,8 +27,9 @@ import UserComponent from '@/components/Desktop/TopNavbar/UserComponent.vue';
 
 import ButtonNavigation from '@/components/Desktop/TopNavbar/ButtonNavigation.vue';
 import NavbarWrapper from '@/components/Desktop/TopNavbar/NavbarWrapper.vue';
-import CategoriesComponent from '@/components/Desktop/Body/CategoriesComponent.vue';
+import CategoriesComponent from '@/components/Desktop/Body/Home/CategoriesComponent.vue';
 import { useUserStore } from '@/stores/user';
+import MixesComponent from '@/components/Desktop/Body/Home/MixesComponent.vue';
 
 const userStore = useUserStore();
 const recentlyPlayed = [...userStore.mixes].splice(1, 2);
@@ -36,7 +37,6 @@ const yourMixes = [...userStore.mixes].splice(0, 2);
 const madeForYou = [...userStore.mixes].splice(2, 1);
 const jumpBackIn = [...userStore.mixes].splice(1, 2);
 
-import MixesComponent from '@/components/Desktop/Body/MixesComponent.vue';
 </script>
 
 
