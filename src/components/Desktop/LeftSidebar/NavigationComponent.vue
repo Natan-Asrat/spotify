@@ -2,11 +2,11 @@
     <div class="left-navbar-components">
         <section>
             <ul>
-                <li>
+                <li @click="$router.push({name: 'home'})">
                     <Icon class="icon" icon="material-symbols:home" />
                     <span>Home</span>
                 </li>
-                <li>
+                <li @click="$router.push({name: 'search'})">
                     <Icon class="icon" icon="iconamoon:search" />
                     <span>Search</span>
                 </li>

@@ -12,10 +12,9 @@
 <style lang="scss" scoped>
 .navbar-wrapper {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 5px 40px;
 
     .mid {
         flex: 1;

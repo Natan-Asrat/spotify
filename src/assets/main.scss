@@ -2,7 +2,7 @@ $horizonntal-rule-color: #282828;
 $categories-text-color: #B3B3B3;
 $playing-song-artist-color: #B3B3B3;
 $home-page-nav-user-background: #000000;
-$home-page-nav-user-dropdown-background: #282828;
+$home-page-nav-user-dropdown-background: #0a0a0a;
 $home-page-nav-user-dropdown-text-color: #ffffff;
 $home-page-body-categories-background: #ffffff;
 $home-page-body-categories-text-color: #ffffff;
@@ -18,6 +18,25 @@ $home-page-body-mixes-play-color: black;
 $home-page-body-mixes-background: #ffffff;
 $home-page-body-mixes-text-color: #ffffff;
 $home-page-body-mixes-see-all-color: #ccc;
+$home-page-body-mixes-title-color: white;
+
+
+$search-page-nav-user-background: #000000;
+$search-page-nav-user-dropdown-background: #0a0a0a;
+$search-page-nav-user-dropdown-text-color: #ffffff;
+$search-page-nav-user-background: #000000;
+$search-page-nav-background: #000000;
+$search-page-background: #121212;
+$search-page-body-mixes-text-color: #ffffff;
+$search-page-body-mixes-opacity: 0.04;
+$search-page-body-mixes-background: #ffffff;
+$search-page-body-mixes-play-color: black;
+$search-page-body-mixes-play-shadow: rgba(0, 0, 0, 0.5);
+$search-page-body-mixes-play-background: green;
+$search-page-body-mixes-title-color: white;
+
+$search-page-body-your-genres-item-name-text-color: black;
+$search-page-body-your-genres-title-text-color: white;
 
 
 .left-navbar-components {
@@ -104,7 +123,7 @@ $home-page-body-mixes-see-all-color: #ccc;
   }
   
   .title {
-    color: white;
+    color: $home-page-body-mixes-title-color;
   }
   .mixes-container {
     .see-all {
@@ -172,8 +191,76 @@ $home-page-body-mixes-see-all-color: #ccc;
     
   }
 }
+
+.search-page {
+  background-color: $search-page-background;
+  .title {
+    color: $search-page-body-mixes-title-color
+  }
+  .wide-container {
+    .title {
+      color: $search-page-body-your-genres-title-text-color;
+    }
+    .wide-card-wrapper {
+      span {
+        color: $search-page-body-your-genres-item-name-text-color;
+      }
+    }
+  }
+  .navbar-wrapper {
+    background-color: $search-page-nav-background;
+  }
+  .nav-button-wrapper{
+    background-color: transparent;
+    .icon {
+      color: white;
+    }
+  }
+  .dropdown {
+    background-color: $search-page-nav-user-dropdown-background;
+    button{
+      color: $search-page-nav-user-dropdown-text-color;
+
+    }
+  }
+  .user-component {
+    background-color: $search-page-nav-user-background;
+    span{
+      color: white;
+      margin-right: 4px;
+    }
+    .dropdown-icon {
+      color: white;
+      margin-right: 8px;
+    }
+    
+    
+  }
+  .mix-wrapper {
+    .play-icon {
+      background-color: $search-page-body-mixes-play-background;
+      box-shadow: 0px 4px 8px $search-page-body-mixes-play-shadow;
+
+      .icon {
+        color: $search-page-body-mixes-play-color;
+      }
+    }
+    img {
+      border-radius: 50%;
+    }
+    .bg{
+      background-color: $search-page-body-mixes-background;
+      opacity: $search-page-body-mixes-opacity;
+    }
+    span {
+      color: $search-page-body-mixes-text-color;
+    }
+  }
+  
+}
 ::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;

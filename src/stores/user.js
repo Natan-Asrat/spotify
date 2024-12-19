@@ -42,6 +42,24 @@ export const useUserStore = defineStore("user", {
                 artists: 'Jullia Wolf, Khalid, and more',
                 image: 'https://placehold.co/100'
             },
+        ],
+        genres: [
+            {
+                name: 'Pop',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Hiphop',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Afro',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Rap',
+                image: 'https://placehold.co/200'
+            }
         ]
     })
 })

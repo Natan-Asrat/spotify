@@ -44,5 +44,43 @@ export const useCategoriesStore = defineStore('categories', {
                 image: 'https://placehold.co/50'
             }    
         ],
+        genres: [
+            {
+                name: 'Podcasts',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Charts',
+                image: 'https://placehold.co/200'
+            },{
+                name: 'Discover',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Concerts',
+                image: 'https://placehold.co/200'
+            },{
+                name: 'R&B',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Frequency',
+                image: 'https://placehold.co/200'
+            },{
+                name: 'Soul',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Workout',
+                image: 'https://placehold.co/200'
+            },{
+                name: 'Equal',
+                image: 'https://placehold.co/200'
+            },
+            {
+                name: 'Alternative',
+                image: 'https://placehold.co/200'
+            },
+        ]
     })
 })
